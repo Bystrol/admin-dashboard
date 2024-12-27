@@ -1,5 +1,9 @@
-import common from "./common.json"
+import common from './common.json';
+import languages from './languages.json';
+import routes from './routes.json';
 
 export default {
-    common
-} as const
+  common,
+  languages,
+  routes,
+} as const;
