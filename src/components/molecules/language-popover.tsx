@@ -5,7 +5,6 @@ import { PlFlagIcon } from '@/icons/pl-flag';
 import { useChangeLocale, useCurrentLocale, useI18n } from '@/locales/client';
 import { Typography, Button, Popover, Box } from '@mui/material';
 import { MouseEvent, ReactNode, useState } from 'react';
-import toast from 'react-hot-toast';
 
 export const LanguagePopover = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -24,7 +23,6 @@ export const LanguagePopover = () => {
   const handleLanguageOptionClick = (callbackFn: () => void) => {
     callbackFn();
     handleClosePopover();
-    toast.success(t('languages.languageChanged'));
   };
 
   const open = Boolean(anchorEl);
