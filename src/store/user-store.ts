@@ -13,7 +13,7 @@ interface UserStore {
 export const useUserStore = create(
   persist<UserStore>(
     (set, get) => ({
-      theme: 'light',
+      theme: 'dark',
       toggleTheme: () =>
         set({
           theme: get().theme === 'light' ? 'dark' : 'light',
