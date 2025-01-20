@@ -10,6 +10,7 @@ import { useCurrentLocale } from '@/locales/client';
 import { parseOverviewSearchParams } from '../../search-params/parser';
 import { defaultOverviewSearchParams } from '../../search-params/default-values';
 import { revalidatePathOnServer } from '@/utils/revalidate-path-on-server';
+import { wait } from '@/utils/wait';
 
 const formatter: DateFormatter = ({ date, locale, format }) => {
   if (Array.isArray(date)) {
@@ -49,8 +50,15 @@ export const DateRangePicker = () => {
       leftSection={<CalendarIcon fontSize="small" />}
       rightSection={<ChevronDownIcon fontSize="small" />}
       value={value.revenueDateRange}
-      onChange={(dates) => {
+      onChange={async (dates) => {
         setValue({ revenueDateRange: dates });
+
+        if (dates.every((date) => !!date)) {
+          await wait(2000);
+          revalidatePathOnServer('/overview');
+          return;
+        }
+
         revalidatePathOnServer('/overview');
       }}
       style={{
