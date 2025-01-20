@@ -9,7 +9,7 @@ import { MouseEvent, ReactNode, useState } from 'react';
 export const LanguagePopover = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const locale = useCurrentLocale();
-  const changeLocale = useChangeLocale();
+  const changeLocale = useChangeLocale({ preserveSearchParams: true });
   const t = useI18n();
 
   const handleClickAnchorElement = (event: MouseEvent<HTMLButtonElement>) => {

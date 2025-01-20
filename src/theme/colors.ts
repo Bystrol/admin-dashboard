@@ -37,4 +37,7 @@ export const colors = {
     'orange-300': '#FF9E2C',
     'orange-400': '#D5691B',
   },
+  others: {
+    'yellow-50': '#FFB01650',
+  },
 };

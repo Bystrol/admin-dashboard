@@ -3,6 +3,7 @@ import { ToggleThemeButton } from '../atoms/toggle-theme-button';
 import { LanguagePopover } from '../molecules/language-popover';
 import { UserButton } from '../atoms/user-button';
 import { colors } from '@/theme/colors';
+import { Suspense } from 'react';
 
 export const Navbar = () => {
   return (
@@ -19,7 +20,11 @@ export const Navbar = () => {
       }}
     >
       <ToggleThemeButton />
-      <LanguagePopover />
+
+      <Suspense>
+        <LanguagePopover />
+      </Suspense>
+
       <UserButton />
     </Box>
   );
