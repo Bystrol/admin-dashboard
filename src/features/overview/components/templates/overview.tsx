@@ -2,6 +2,8 @@ import { Box, Typography } from '@mui/material';
 import { RevenueAndExpenses } from '../organisms/revenue-and-expenses';
 import { getI18n } from '@/locales/server';
 import { currentUser } from '@clerk/nextjs/server';
+import { UsersByDevice } from '../organisms/users-by-device';
+import { AsyncComponentFallback } from '@/components/molecules/async-component-fallback';
 
 export const Overview = async () => {
   const t = await getI18n();
@@ -23,7 +25,15 @@ export const Overview = async () => {
         </Typography>
       </Box>
 
-      <RevenueAndExpenses />
+      <AsyncComponentFallback>
+        <RevenueAndExpenses />
+      </AsyncComponentFallback>
+
+      <Typography variant="h4">{t('overview.overview.reports.title')}</Typography>
+
+      <AsyncComponentFallback>
+        <UsersByDevice />
+      </AsyncComponentFallback>
     </Box>
   );
 };

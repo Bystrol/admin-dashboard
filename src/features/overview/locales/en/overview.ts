@@ -6,4 +6,8 @@ export default {
     revenue: 'Revenue',
     expenses: 'Expenses',
   },
+  reports: {
+    title: 'Reports overview',
+    totalUsers: 'Total users',
+  },
 } as const;

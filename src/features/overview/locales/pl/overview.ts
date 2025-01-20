@@ -6,4 +6,8 @@ export default {
     revenue: 'Przychody',
     expenses: 'Wydatki',
   },
+  reports: {
+    title: 'Przegląd raportów',
+    totalUsers: 'Całkowita liczba użytkowników',
+  },
 } as const;
