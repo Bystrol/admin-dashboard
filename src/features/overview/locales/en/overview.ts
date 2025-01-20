@@ -10,4 +10,13 @@ export default {
     title: 'Reports overview',
     totalUsers: 'Total users',
   },
+  recentOrders: {
+    title: 'Recent orders',
+    order: 'Order',
+    date: 'Date',
+    status: 'Status',
+    total: 'Total',
+    paid: 'Paid',
+    pending: 'Pending',
+  },
 } as const;

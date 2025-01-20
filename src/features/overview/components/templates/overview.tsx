@@ -4,6 +4,7 @@ import { getI18n } from '@/locales/server';
 import { currentUser } from '@clerk/nextjs/server';
 import { UsersByDevice } from '../organisms/users-by-device';
 import { AsyncComponentFallback } from '@/components/molecules/async-component-fallback';
+import { RecentOrders } from '../organisms/recent-orders';
 
 export const Overview = async () => {
   const t = await getI18n();
@@ -31,9 +32,15 @@ export const Overview = async () => {
 
       <Typography variant="h4">{t('overview.overview.reports.title')}</Typography>
 
-      <AsyncComponentFallback>
-        <UsersByDevice />
-      </AsyncComponentFallback>
+      <Box sx={{ display: 'flex', gap: 2 }}>
+        <AsyncComponentFallback>
+          <UsersByDevice />
+        </AsyncComponentFallback>
+
+        <AsyncComponentFallback>
+          <RecentOrders />
+        </AsyncComponentFallback>
+      </Box>
     </Box>
   );
 };

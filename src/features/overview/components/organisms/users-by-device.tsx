@@ -37,7 +37,7 @@ export const UsersByDevice = async () => {
   ];
 
   return (
-    <Card variant="outlined">
+    <Card variant="outlined" sx={{ flex: 1 }}>
       <Typography variant="body1" color="textSecondary">
         {t('overview.overview.reports.totalUsers')}
       </Typography>
