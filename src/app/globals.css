@@ -18,7 +18,7 @@ body {
 }
 
 .m_dc6a3c71 {
-  font-size: var(--mantine-font-size-sm);
+  font-size: var(--mantine-font-size-sm) !important;
 }
 
 .m_dc6a3c71:where([data-selected]) {
@@ -27,4 +27,8 @@ body {
 
 .m_dc6a3c71:where([data-in-range]) {
   background-color: var(--mantine-primary-color-light-hover) !important;
+}
+
+.m_6fa5e2aa {
+  cursor: pointer !important;
 }
