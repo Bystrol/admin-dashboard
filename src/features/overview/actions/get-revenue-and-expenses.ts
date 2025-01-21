@@ -28,7 +28,7 @@ export const getRevenueAndExpenses = async (
   }
 
   const revenueAndExpenses = await collection.find(filter).toArray();
-
+  console.log({ dateRange, filter, revenueAndExpenses });
   const revenueAndExpensesDto = revenueAndExpenses.map((object) => ({
     ...object,
     _id: object._id.toString(),
