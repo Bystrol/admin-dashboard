@@ -10,4 +10,13 @@ export default {
     title: 'Przegląd raportów',
     totalUsers: 'Całkowita liczba użytkowników',
   },
+  recentOrders: {
+    title: 'Ostatnie zamówienia',
+    order: 'Zamówienie',
+    date: 'Data',
+    status: 'Status',
+    total: 'Łączna kwota',
+    paid: 'Zapłacono',
+    pending: 'Oczekujące',
+  },
 } as const;

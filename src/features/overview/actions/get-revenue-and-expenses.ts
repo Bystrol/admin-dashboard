@@ -22,7 +22,7 @@ export const getRevenueAndExpenses = async (
     filter = {
       timestamp: {
         $gte: new Date(dateRange[0]).toISOString(),
-        $lte: dayjs(dateRange[1]).endOf('month').toISOString(),
+        $lte: dayjs(dateRange[1]).add(1, 'month').toISOString(),
       },
     };
   }
