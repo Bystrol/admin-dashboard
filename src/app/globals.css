@@ -16,3 +16,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
+
+.m_dc6a3c71 {
+  font-size: var(--mantine-font-size-sm);
+}
+
+.m_dc6a3c71:where([data-selected]) {
+  background-color: var(--mantine-primary-color-filled) !important;
+}
+
+.m_dc6a3c71:where([data-in-range]) {
+  background-color: var(--mantine-primary-color-light-hover) !important;
+}
