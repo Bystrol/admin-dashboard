@@ -2,7 +2,8 @@
   "dashboard": {
     "title": "Dashboard",
     "routes": {
-      "overview": "Overview"
+      "overview": "Overview",
+      "orders": "Orders"
     }
   }
 }

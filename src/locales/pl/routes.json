@@ -2,7 +2,8 @@
   "dashboard": {
     "title": "Panel",
     "routes": {
-      "overview": "Przegląd"
+      "overview": "Przegląd",
+      "orders": "Zamówienia"
     }
   }
 }
