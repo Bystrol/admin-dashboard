@@ -11,6 +11,11 @@ export const sidebarRouteGroups = [
         title: 'routes.dashboard.routes.overview',
         href: '/',
       },
+      {
+        id: 'orders',
+        title: 'routes.dashboard.routes.orders',
+        href: '/orders',
+      },
     ],
   },
 ] as const;
