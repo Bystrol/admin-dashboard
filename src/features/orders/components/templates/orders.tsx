@@ -27,7 +27,7 @@ export const Orders = async () => {
         <OrdersTable data={orders} />
       </Card>
 
-      <Pagination totalCount={query ? orders.length : totalCount} pathToRevalidate="/orders" />
+      <Pagination totalCount={totalCount} pathToRevalidate="/orders" />
     </Box>
   );
 };
