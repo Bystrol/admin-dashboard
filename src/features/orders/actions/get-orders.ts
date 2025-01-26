@@ -21,24 +21,24 @@ export const getOrders = async (
   const db = await database();
   const collection: Collection<OrdersResponse> = db.collection('orders');
 
-  const allOrders = await collection.find({}).toArray();
-
   const filter = query ? { id: { $regex: query } } : {};
 
-  const orders = await collection
+  const filteredOrders = await collection.find(filter).toArray();
+
+  const filteredAndPaginatedOrders = await collection
     .find(filter)
     .sort({ $natural: -1 })
     .limit(perPage)
     .skip((page - 1) * perPage)
     .toArray();
 
-  const ordersDto = orders.map((order) => ({
+  const ordersDto = filteredAndPaginatedOrders.map((order) => ({
     ...order,
     _id: order._id.toString(),
   }));
 
   return {
     orders: ordersDto,
-    totalCount: allOrders.length,
+    totalCount: filteredOrders.length,
   };
 };
