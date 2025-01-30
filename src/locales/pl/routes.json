@@ -5,5 +5,11 @@
       "overview": "Przegląd",
       "orders": "Zamówienia"
     }
+  },
+  "settings": {
+    "title": "Ustawienia",
+    "routes": {
+      "account": "Konto"
+    }
   }
 }
