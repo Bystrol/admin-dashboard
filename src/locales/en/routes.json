@@ -5,5 +5,11 @@
       "overview": "Overview",
       "orders": "Orders"
     }
+  },
+  "settings": {
+    "title": "Settings",
+    "routes": {
+      "account": "Account"
+    }
   }
 }
